@@ -2,6 +2,10 @@ from django.urls import path
 
 from . import views
 
+app_name = 'quiz'
+
 urlpatterns = [
-    path('', views.index),
+    # name: url 수정 시 용이성 위해 별칭 부
+    path('', views.index, name='index'),
+    path('<int:question_id>/', views.detail, name='detail'),
 ]
