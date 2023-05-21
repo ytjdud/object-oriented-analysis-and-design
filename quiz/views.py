@@ -30,7 +30,7 @@ def answer_create(request, question_id):
             answer.create_date = timezone.now()
             answer.question = question
             answer.save()
-            return redirect('pybo:detail', question_id=question.id)
+            return redirect('quiz:detail', question_id=question.id)
     else:
         return HttpResponseNotAllowed('Only POST is possible.')
     context = {'question': question, 'form': form}

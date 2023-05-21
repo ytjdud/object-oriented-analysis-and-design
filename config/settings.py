@@ -31,14 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # commonApp 등록
+    'common.apps.CommonConfig',
+    # quizApp 등록
+    'quiz.apps.QuizConfig',
+
     'django.contrib.admin',
+    # login, logout
     'django.contrib.auth',
+
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # quiz/apps.py
-    'quiz.apps.QuizConfig',
 ]
 
 MIDDLEWARE = [
